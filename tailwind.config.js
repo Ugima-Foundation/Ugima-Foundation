@@ -9,14 +9,14 @@ module.exports = {
         secondary: ['Montserrat', 'sans-serif'],  
       },
       colors: {
-        'primary': '#2E6F40',  
-        'secondary': ' #88e788',
-        'Complementary': '#FFD700'
+        'primary': '#acd03a',  
+        'secondary': '#6fa245',
+        'Complementary': '#d4af37'
       },
         perspective: {
         '1000': '1000px',
       },
-      transformOrigin: {
+      transformOrigin: { 
         'center': 'center',
       },
       rotate: {

@@ -22,7 +22,7 @@ const Navbar = () => {
         targetElement.scrollIntoView({ behavior: 'smooth' });
       }
     }
-    // If not on the homepage or no hash, let the Link handle navigation
+  
   };
 
   return (

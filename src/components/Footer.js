@@ -1,84 +1,122 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { FaLinkedin, FaYoutube } from "react-icons/fa"; 
+import React from 'react';
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Phone,
+  Mail,
+  MapPin,
+  MessageSquareText
+} from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer id="footer" className="font-sans text-gray-700 bg-white border-t border-gray-200">
-      {/* Main Footer Content Area (Top Section) */}
-      <div className="container px-4 py-16 mx-auto max-w-7xl">
-        <div className="flex flex-col items-start justify-between gap-16 lg:flex-row">
-          <div className="flex flex-col w-full gap-6 lg:w-1/3">
-            <img
-              className="w-[200px] h-auto"
-              src='applogo.png'
-              alt="Company Logo"
-            />
-            
-            <div className="mt-4 text-xl leading-relaxed">
-              <p>Need help finding the best solution for your business?</p>
+    <>
+      {/* Visual Separator */}
+      <div className="h-1 bg-gradient-to-r from-[#acd03a] to-[#6fa245] mt-16" />
+
+      <footer className="py-12 text-gray-800 bg-gray-50">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+            {/* Company Info */}
+            <div className="space-y-6 md:col-span-2">
+              {/* Logo Space */}
+              <img src="/ugima_foundation.png" alt="Ugima Foundation Logo" className="w-auto h-20" />
+              <p className="max-w-md text-sm leading-relaxed text-gray-600">
+                Empowering communities through sustainable coffee production and fostering social equity in Kenya.
+              </p>
+              <div className="flex gap-3">
+                {/* WhatsApp */}
+                <a
+                  href="https://api.whatsapp.com/send/?phone=254708906367&text&type=phone_number&app_absent=0"
+                  aria-label="WhatsApp"
+                  className="p-2 bg-white rounded-full shadow-sm hover:bg-[#25D366] transition-colors duration-300 group"
+                >
+                  <MessageSquareText className="w-5 h-5 text-[#25D366] group-hover:text-white" />
+                </a>
+                {/* Facebook */}
+                <a
+                  href="https://web.facebook.com/profile.php?id=61578528475021&_rdc=1&_rdr"
+                  aria-label="Facebook"
+                  className="p-2 bg-white rounded-full shadow-sm hover:bg-[#4267B2] transition-colors duration-300 group"
+                >
+                  <Facebook className="w-5 h-5 text-[#4267B2] group-hover:text-white" />
+                </a>
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/ugima.coffee/"
+                  aria-label="Instagram"
+                  className="p-2 transition-colors duration-300 bg-white rounded-full shadow-sm hover:bg-gradient-to-bl hover:from-pink-500 hover:to-yellow-500 group"
+                >
+                  <Instagram className="w-5 h-5 text-[#E1306C] group-hover:text-white" />
+                </a>
+                {/* Twitter */}
+                <a
+                  href="https://x.com/ugimacoffee"
+                  aria-label="Twitter"
+                  className="p-2 bg-white rounded-full shadow-sm hover:bg-[#1DA1F2] transition-colors duration-300 group"
+                >
+                  <Twitter className="w-5 h-5 text-[#1DA1F2] group-hover:text-white" />
+                </a>
+              </div>
             </div>
-            
-            <div className="flex items-center mt-4 transition duration-300 text-primary hover:text-secondary">
-              <Link to="/contactPage" className="mr-2 text-base font-semibold">
-                Contact Us
-              </Link>
-              <svg className="w-6 h-6 transform rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
-              </svg>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="mb-4 text-base font-semibold text-gray-900">Quick Links</h4>
+              <ul className="space-y-3 text-sm text-gray-600">
+                <li>
+                  <a href="/about" className="hover:text-[#6fa245] transition-colors duration-300">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="/products-services" className="hover:text-[#6fa245] transition-colors duration-300">
+                    Our Products
+                  </a>
+                </li>
+                <li>
+                  <a href="/ugima-foundation" className="hover:text-[#6fa245] transition-colors duration-300">
+                    Ugima Foundation
+                  </a>
+                </li>
+                <li>
+                  <a href="/contact" className="hover:text-[#6fa245] transition-colors duration-300">
+                    Contact
+                  </a>
+                </li>
+              </ul>
             </div>
-            
-            {/* Social Icons (LinkedIn, YouTube) */}
-            <div className="flex mt-8 space-x-4">
-              <a href="https://www.linkedin.com/company/zetscore" target="_blank" rel="noopener noreferrer" className="p-2 text-black transition duration-300 bg-white border border-black rounded-full hover:bg-gray-100" aria-label="LinkedIn">
-                <FaLinkedin className="w-5 h-5" />
-              </a>
-              <a href="https://twitter.com/zetscore" target="_blank" rel="noopener noreferrer" className="p-2 text-black transition duration-300 bg-white border border-black rounded-full hover:bg-gray-100" aria-label="YouTube">
-                <FaYoutube className="w-5 h-5" />
-              </a>
+
+            {/* Contact Info */}
+            <div>
+              <h4 className="mb-4 text-base font-semibold text-gray-900">Contact Info</h4>
+              <div className="space-y-3 text-sm text-gray-600">
+                <div className="flex items-center gap-2">
+                  <Mail className="w-5 h-5 text-[#6fa245]" />
+                  info@ugimafoundation.org
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-5 h-5 text-[#6fa245]" />
+                  +254 708 906 367
+                </div>
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-5 h-5 text-[#6fa245]" />
+                  Nairobi, Kenya
+                </div>
+              </div>
             </div>
           </div>
-          
-          {/* Right Columns: Navigation Links */}
-          <div className="grid w-full grid-cols-2 gap-12 mt-10 sm:grid-cols-3 lg:w-2/3 lg:mt-0">
-            {/* Column 1 */}
-            <div className="flex flex-col gap-4">
-              <p className="font-bold">ABOUT</p>
-              <Link to="/about-us" className="text-base text-gray-700 transition duration-200 hover:text-primary">About Us</Link>
-              <Link to="/work-in-progress-page" className="text-base text-gray-700 transition duration-200 hover:text-primary">Resource Center</Link>
-              <Link to="/contact-page" className="text-base text-gray-700 transition duration-200 hover:text-primary">Contact Us</Link>
-            </div>
-            
-            {/* Column 2 */}
-            <div className="flex flex-col gap-4">
-              <p className="font-bold">NEWSROOM</p>
-              <Link to="/articles" className="text-base text-gray-700 transition duration-200 hover:text-primary">Articles</Link>
-              <Link to="/events" className="text-base text-gray-700 transition duration-200 hover:text-primary">Events and Webinars</Link>
-              <Link to="/release-notes-page" className="text-base text-gray-700 transition duration-200 hover:text-primary">Release Notes</Link>
-            </div>
-            
-            {/* Column 3 */}
-            <div className="flex flex-col gap-4">
-              <p className="font-bold">SUPPORT</p>
-              <Link to="/faq-page" className="text-base text-gray-700 transition duration-200 hover:text-primary">FAQ</Link>
-              <Link to="/customer-support-page" className="text-base text-gray-700 transition duration-200 hover:text-primary">Customer Support</Link>
-              <Link to="/work-in-progress-page" className="text-base text-gray-700 transition duration-200 hover:text-primary">Training and Certification</Link>
-            </div>
+
+          {/* Bottom Notice */}
+          <div className="pt-8 mt-12 text-center border-t border-Complementary">
+            <p className="text-sm text-black">
+              © {new Date().getFullYear()} Ugima Foundation. All rights reserved.
+            </p>
           </div>
         </div>
-      </div>
-      
-      {/* Bottom Footer Section (Copyright and Legal Links) */}
-      <div className="py-4 text-sm text-gray-600 border-t border-gray-200 bg-gray-50">
-        <div className="container items-center px-4 mx-auto space-y-4 text-center max-w-7xl md:flex-row md:space-y-0">
-          <div className="space-y-2 tems-center sm:flex-row sm:space-y-0 sm:space-x-4">
-            <span>
-              <p>Powered By © {new Date().getFullYear()} Evolv IZSoftwares Group Ltd. All rights reserved.</p>
-            </span>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </>
   );
 };
 

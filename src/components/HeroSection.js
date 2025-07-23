@@ -1,71 +1,40 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Play, Shield, Smartphone, TrendingUp } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="relative py-16 overflow-hidden bg-gradient-to-br from-white to-secondary lg:py-24">
-      <div className="relative px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div className="grid items-stretch gap-12 lg:grid-cols-2">
-          {/* Left Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="mb-6 text-4xl font-bold leading-tight text-gray-900 lg:text-6xl">
-            Ugima Foundation, Ugima Coffee
-            </h1>
-            <p className="mb-8 text-xl leading-relaxed text-gray-600">
-           Ugima Foundation | Ugima Coffee is a Kenyan social enterprise focused on Sustainable Production & Export of Coffee while empowering women and fostering community development. aligned with the United Nations’ Sustainable Development Goals (SDGs).
-            </p>
+    <section className="relative flex items-center justify-center min-h-screen overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
+        <img
+          src="/batian.jpeg"
+          alt="Sustainable Coffee Farming"
+          className="object-cover w-full h-full"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-green-900/80 via-green-800/60 to-transparent"></div>
+      </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col justify-center gap-4 mb-12 sm:flex-row lg:justify-start">
-              <Link
-                to="#"
-                className="inline-flex items-center px-6 py-3 font-semibold text-white transition-all duration-200 rounded-lg shadow-lg bg-primary hover:bg-primary/80 hover:shadow-xl group"
-              >
-                <Play className="w-5 h-5 mr-2 transition-transform group-hover:scale-110" />
-                Discover Our Impact
-              </Link>
-            </div>
-
-            {/* Trust Signals */}
-            <div className="grid grid-cols-3 gap-8 text-center lg:text-left">
-              <div className="flex flex-col items-center lg:items-start">
-                <div className="flex items-center justify-center w-12 h-12 mb-3 bg-orange-100 rounded-lg">
-                  <Shield className="w-6 h-6 text-Complementary" />
-                </div>
-                <div className="text-2xl font-bold text-gray-900">99.9%</div>
-                <div className="text-sm text-gray-600">Fraud Prevention</div>
-              </div>
-              <div className="flex flex-col items-center lg:items-start">
-                <div className="flex items-center justify-center w-12 h-12 mb-3 bg-green-100 rounded-lg">
-                  <Smartphone className="w-6 h-6 text-secondary" />
-                </div>
-                <div className="text-2xl font-bold text-gray-900">100+</div>
-                <div className="text-sm text-gray-600">MFIs Served</div>
-              </div>
-              <div className="flex flex-col items-center lg:items-start">
-                <div className="flex items-center justify-center w-12 h-12 mb-3 bg-yellow-100 rounded-lg">
-                  <TrendingUp className="w-6 h-6 text-Complementary" />
-                </div>
-                <div className="text-2xl font-bold text-gray-900">85%</div>
-                <div className="text-sm text-gray-600">Efficiency Boost</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Visual */}
-          <div className="relative h-full">
-            <div className="relative w-full h-full mx-auto">
-              <div className="h-full">
-                <img 
-                  src='/tree-with-small-green-red-berries-it.jpg'
-                  alt="Team working" 
-                  className="object-cover w-full h-full rounded-lg shadow-xl"
-                />
-              </div>
-            </div>
-          </div>
+      {/* Content */}
+      <div className="relative z-10 px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
+        <div className="animate-fade-in">
+          <h1 className="mb-6 text-5xl font-bold leading-tight text-white transition-all duration-500 transform md:text-7xl hover:scale-105">
+            Ugima Foundation 
+            {/* <span className="block text-green-200 animate-pulse">Coffee for a Cause</span> */}
+          </h1>
+          <p className="max-w-4xl mx-auto mb-8 text-xl font-light leading-relaxed text-green-100 md:text-2xl">
+            Sustainable Production & Export of Coffee, Empowering Women, Fostering Community Development.
+          </p>
+          <button className="relative px-8 py-4 text-lg font-semibold text-white transition-all duration-300 transform rounded-full bg-primary group hover:bg-green-500 hover:scale-110 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-green-300">
+            <span className="relative z-10">Discover Our Impact</span>
+            <div className="absolute inset-0 transition-opacity duration-300 rounded-full opacity-0 bg-gradient-to-r from-green-400 to-green-600 group-hover:opacity-100"></div>
+          </button>
         </div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <div className="absolute transform -translate-x-1/2 bottom-8 left-1/2 animate-bounce">
+        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
       </div>
     </section>
   );
