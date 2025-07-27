@@ -94,7 +94,7 @@ const Footer = () => {
               <div className="space-y-3 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
                   <Mail className="w-5 h-5 text-[#6fa245]" />
-                  info@ugimafoundation.org
+                  info@ugima.foundation
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-5 h-5 text-[#6fa245]" />

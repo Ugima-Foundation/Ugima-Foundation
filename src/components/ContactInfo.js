@@ -30,7 +30,7 @@ const ContactInfo = () => {
                 </svg>
               </div>
               <h3 className="mb-2 text-xl font-bold text-gray-800">Email Us</h3>
-              <p className="font-light text-gray-600">info@ugimafoundation.org</p>
+              <p className="font-light text-gray-600">info@ugima.foundation</p>
             </div>
           </div>
 
